@@ -1,0 +1,19 @@
+#!/bin/bash -x
+second_S=0
+second_l=1000
+for ((i=0;i<10;i++))
+do
+   value=$((RANDOM%900+100))
+	array[i]=$value
+if [ $value -gt $second_l ]
+then 
+	echo $second_l
+	second_l=${array[i]}
+elif [ $value -lt $second_S ]
+then
+	 echo $second_S
+fi
+done
+echo ${array[@]}
+echo  ${array[i]}
+
