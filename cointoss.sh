@@ -9,9 +9,11 @@ arr[i]=$result
 if [ $result -eq 0 ]
 
 then
+	((head++))
 	echo $head
 	arr[i]=$result
 else
+	((tail++))
 echo $tail
 fi
 done
